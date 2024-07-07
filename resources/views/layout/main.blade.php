@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>GYM To Train Your Fitness and Mind</title>
+	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<style>
@@ -151,13 +152,47 @@
 	<header>
 		<nav>
 			<div class="logo"><i class="fas fa-dumbbell"></i><span> CalBurn</span></div>
-			<ul>
-				<li><a href="/">Home</a> </li>
-				<li><a href="/exercise">Exercises</a> </li>
-				<li><a href="/nutrition">Nutrition</a></li>
-				<li><a href="/healthtips">Health Tips</a></li>
-				<li><a href="/userinfo"><i class="fa-solid fa-user fa-2xl"></i></a></li>
-			</ul>
+			<ul class="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/exercise">Exercises</a></li>
+        <li><a href="/nutrition">Nutrition</a></li>
+        <li><a href="/healthtips">Health Tips</a></li>
+        
+        <div class="userinfo d-flex">
+            <li>
+                @guest
+                    @if (Route::has('login'))
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                    @endif
+
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+                    @endif
+                @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-user fa-2xl"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item " href="/userinfo">My Profile</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
+            </li>
+        </div>
+    </ul>
 		</nav>
 	</header>
 	@yield('content')
@@ -280,7 +315,9 @@
 		<!-- Footer -->
 	</div>
 	<!-- End of .container -->
-	<!-- End of .container -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 

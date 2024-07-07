@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\UserController;
 use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,20 +23,25 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/exercise', [CategoryController::class, 'categories']);
 
-Route::get('/nutrition',[UserController::class,'nutrition']);
 
-Route::get('/healthtips',[UserController::class,'healthtips']);
-
-Route::get('/userinfo',[UserController::class,'userInfo']);
-
-Route::get('/chest',[UserController::class,'chest']);
+Route::get('/chest', [UserController::class, 'chest']);
 
 
 Route::get('/category/{slug}', [SubCategoryController::class, 'index']);
 
 Route::get('/subcategory/{slug}', [ProductController::class, 'index']);
 
+Route::get('/userinfo', [UserController::class, 'userInfo']);
 
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/exercise', [CategoryController::class, 'categories']);
+    Route::get('/nutrition', [UserController::class, 'nutrition']);
+    Route::get('/healthtips', [UserController::class, 'healthtips']);
+
+});
