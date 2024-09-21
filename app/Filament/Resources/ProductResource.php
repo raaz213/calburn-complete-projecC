@@ -35,7 +35,6 @@ class ProductResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('images')
-                    ->image()
                     ->multiple()
                     ->required(),
             ]);

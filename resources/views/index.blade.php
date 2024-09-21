@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>GYM To Train Your Fitness and Mind</title>
+	<title>BCA Study Hub</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style2.css')}}"> -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -22,24 +22,25 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src=" {{asset('assets/img/2.jpg')}}" class="d-block w-100" alt="...">
+      <img src=" {{asset('assets/img/img1.webp')}}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h1 style="color:red">Destroy Your Calories , Transform Your Body</h1>
-			<h3>Some people want it to happen, some wish it would happen, others make it happen</h3>
+        <h1 style="color:rgb(235, 11, 11)">Ignite your passion for learning, shape your future.</h1>
+			<h3 style="color:#00ff4c">Some envision greatness, some hope for it, others achieve it.</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="{{asset('assets/img/img5.webp')}}" class="d-block w-100" alt="...">
+      <img src="{{asset('assets/img/img2.jpg')}}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h1 style="color:red">Exercise is labor without weariness</h1>
-        <h3>All progress takes place outside the comfort zone.</h3>
+        <h1 style="color:red">Master your subjects, transform your intellect.</h1>
+        <h3 style="color:hsl(231, 100%, 50%)"> Some imagine success, some long for it, others strive for it.</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="{{asset('assets/img/img4.jpg')}}" class="d-block w-100" alt="...">
+      <img src="{{asset('assets/img/img3.jpg')}}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h1 style="color:red">Success is what comes after your stop making excuses</h1>
-        <h3>Physical fitness is not only one of the most important keys to a healthy body, it is the basis of dynamic and creative intellectual activity.</h3>
+        <h3 style="color:#00ff4c">Focus on your studies, expand your horizons.
+          Some see the potential, some wish they could, others realize it.</h3>
       </div>
     </div>
   </div>

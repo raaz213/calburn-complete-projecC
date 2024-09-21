@@ -13,11 +13,5 @@ class CategoryController extends Controller
         $categories = Category::all();
         return view('exercise', compact('categories'));
     }
-
-    // public function show($slug)
-    // {
-    //     $category = Category::where('slug', $slug)->firstOrFail();
-    //     return view('category.show', compact('category'));
-    // }
    
 }

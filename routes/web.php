@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubCategoryController;
+use App\Http\Controllers\SyllabusController;
 use App\Http\Controllers\UserController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
@@ -42,6 +43,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/exercise', [CategoryController::class, 'categories']);
     Route::get('/nutrition', [UserController::class, 'nutrition']);
-    Route::get('/healthtips', [UserController::class, 'healthtips']);
+    Route::get('/syllabus', [SyllabusController::class, 'syllabuslist']);
 
 });

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>GYM To Train Your Fitness and Mind</title>
+	<title>BCA Study Hub</title>
 	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -151,12 +151,12 @@
 <body>
 	<header>
 		<nav>
-			<div class="logo"><i class="fas fa-dumbbell"></i><span> CalBurn</span></div>
+			<div class="logo"><i class="fa-solid fa-book"></i><span> BCA Study Hub</span></div>
 			<ul class="nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="/exercise">Exercises</a></li>
-        <li><a href="/nutrition">Nutrition</a></li>
-        <li><a href="/healthtips">Health Tips</a></li>
+		<li><a href="/">Home</a></li>
+        <li><a href="/exercise">Notes</a></li>
+        <li><a href="/exercise">Past Questions</a></li>
+        <li><a href="/syllabus">Syllabus</a></li>
         
         <div class="userinfo d-flex">
             <li>
@@ -196,50 +196,40 @@
 		</nav>
 	</header>
 	@yield('content')
-	<!-- Remove the container if you want to extend the Footer to full width. -->
+	
 	<div class="footer">
-		<!-- Footer -->
 		<footer class="text-center text-lg-start text-white bg-dark">
-			<!-- Grid container -->
 			<div class="container p-4 pb-0">
-				<!-- Section: Links -->
 				<section class="">
-					<!--Grid row-->
 					<div class="row">
-						<!-- Grid column -->
 						<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
 							<h6 class="text-uppercase mb-4 font-weight-bold">
-							<div class="logo"><i class="fas fa-dumbbell"></i><span> CalBurn</span></div>
+							<div class="logo"><i class="fa-solid fa-book"></i><span> BCA Study Hub</span></div>
 							</h6>
 							<p>
 							The harder you work and the more prepared you are for something, you’re going to be able to persevere through anything.
 							</p>
 						</div>
-						<!-- Grid column -->
-
 						<hr class="w-100 clearfix d-md-none" />
 
-						<!-- Grid column -->
 						<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
 							<h6 class="text-uppercase mb-4 font-weight-bold">Our Services</h6>
 							<p>
-								<a class="text-white">Weight Loss Exercises</a>
+								<a class="text-white">Effictive Notes</a>
 							</p>
 							<p>
-								<a class="text-white">Weight Gain Exercises</a>
+								<a class="text-white">Syllabus Guides</a>
 							</p>
 							<p>
-								<a class="text-white">Yoga</a>
+								<a class="text-white">Past Questions collections</a>
 							</p>
 							<p>
-								<a class="text-white">Meditation</a>
+								<a class="text-white">BCA Notices</a>
 							</p>
 						</div>
-						<!-- Grid column -->
 
 						<hr class="w-100 clearfix d-md-none" />
 
-						<!-- Grid column -->
 						<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
 							<h6 class="text-uppercase mb-4 font-weight-bold">
 								Useful links
@@ -258,10 +248,8 @@
 							</p>
 						</div>
 
-						<!-- Grid column -->
 						<hr class="w-100 clearfix d-md-none" />
 
-						<!-- Grid column -->
 						<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
 							<h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
 							<p><i class="fas fa-home mr-3"></i> Sundarharincha-10, Morang</p>
@@ -269,29 +257,20 @@
 							<p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
 							<p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
 						</div>
-						<!-- Grid column -->
 					</div>
-					<!--Grid row-->
 				</section>
-				<!-- Section: Links -->
 
 				<hr class="my-3">
 
-				<!-- Section: Copyright -->
 				<section class="p-3 pt-0">
 					<div class="row d-flex align-items-center">
-						<!-- Grid column -->
 						<div class="col-md-7 col-lg-8 text-center text-md-start">
-							<!-- Copyright -->
 							<div class="p-3">
-								© 2020 Copyright:
-								<a class="text-white" href="https://mdbootstrap.com/">CalBurn.com</a>
+								© 2024 Copyright:
+								<a class="text-white" href="https://mdbootstrap.com/">BCA Study HUb.com</a>
 							</div>
-							<!-- Copyright -->
 						</div>
-						<!-- Grid column -->
 
-						<!-- Grid column -->
 						<div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
 							<!-- Facebook -->
 							<a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-facebook-f"></i></a>
@@ -305,14 +284,10 @@
 							<!-- Instagram -->
 							<a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-instagram"></i></a>
 						</div>
-						<!-- Grid column -->
 					</div>
 				</section>
-				<!-- Section: Copyright -->
 			</div>
-			<!-- Grid container -->
 		</footer>
-		<!-- Footer -->
 	</div>
 	<!-- End of .container -->
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
