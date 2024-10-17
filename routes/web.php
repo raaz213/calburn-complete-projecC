@@ -26,8 +26,9 @@ Route::get('/', function () {
 
 
 
-Route::get('/chest', [UserController::class, 'chest']);
+Route::get('/product', [UserController::class, 'index']);
 
+Route::get('/syllabus', [SyllabusController::class, 'syllabi']);
 
 Route::get('/category/{slug}', [SubCategoryController::class, 'index']);
 
@@ -41,8 +42,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/exercise', [CategoryController::class, 'categories']);
-    Route::get('/nutrition', [UserController::class, 'nutrition']);
-    Route::get('/syllabus', [SyllabusController::class, 'syllabuslist']);
+    Route::get('/category', [CategoryController::class, 'categories']);
+    // Route::get('/syllabus', [SyllabusController::class, 'syllabuslist']);
 
 });

@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layout.main') 
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,7 @@
   <section class="card-container">
     @foreach($subcategories as $subcategory)
     @php
-    $imagePath = is_array($subcategory->images) ? $subcategory->images[0] : $subcategory->images;
+    $imagePath = (is_array($subcategory->images) && count($subcategory->images) > 0) ? $subcategory->images[0] : 'default-image.jpg';
     @endphp
     <div class="card" style="width: 18rem;" onclick="window.location.href = '/subcategory/{{$subcategory->slug}}'">
       <img src="{{ asset('storage/' . $imagePath) }}" class="card-img-top" alt="...">

@@ -154,9 +154,9 @@
 			<div class="logo"><i class="fa-solid fa-book"></i><span> BCA Study Hub</span></div>
 			<ul class="nav">
 		<li><a href="/">Home</a></li>
-        <li><a href="/exercise">Notes</a></li>
-        <li><a href="/exercise">Past Questions</a></li>
-        <li><a href="/syllabus">Syllabus</a></li>
+        <li><a href="/category">Notes</a></li>
+		<li><a href="/category">Syllabus</a></li>
+        <li><a href="/category">Past Questions</a></li>
         
         <div class="userinfo d-flex">
             <li>

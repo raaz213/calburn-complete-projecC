@@ -11,7 +11,7 @@ class CategoryController extends Controller
     public function categories()
     {
         $categories = Category::all();
-        return view('exercise', compact('categories'));
+        return view('category', compact('categories'));
     }
    
 }
